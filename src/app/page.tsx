@@ -291,7 +291,7 @@ export default function Home() {
               ["Microsoft Azure AI-900", "Microsoft", "2024"],
               ["AWS Partner: Sales Accreditation", "AWS", "2024"],
               ["AWS Partner: Cloud Economics", "AWS", "2024"],
-              ["React.js Developer Assessment", "Learntube", "2023"],
+              ["React.js Developer Assessment", "Learntube", "2025"],
             ].map(([title, org, year]) => (
               <div
                 key={title}
