@@ -1,8 +1,8 @@
-// src/app/page.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import BackToTop from "../components/BackToTop";
 import ContactForm from "../components/ContactForm";
@@ -63,69 +63,94 @@ export default function Home() {
 
       <main className="mx-auto max-w-6xl px-5 sm:px-6 pt-24 pb-16">
 
-        {/* Hero */}
+        {/* HERO */}
         <section className="text-center">
-          <motion.p
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.45 }}
-            className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm"
+            className="mx-auto mb-6 h-32 w-32 sm:h-40 sm:w-40 rounded-full overflow-hidden border border-white/20 shadow-lg"
+          >
+            <Image
+              src="/profile.jpeg"
+              alt="Moses Marlon Pereira"
+              width={160}
+              height={160}
+              priority
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm text-gray-200"
           >
             👋 Hi — welcome to my corner of the web
           </motion.p>
-        <div className="mt-6 flex justify-center gap-6 text-sm text-muted">
-  <span>⚡ 5+ Projects</span>
-  <span>🧠 AI + Full Stack</span>
-  <span>☁️ Cloud Certified</span>
-</div>
+
+          <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+            <span>⚡ 5+ Projects</span>
+            <span>🧠 AI + Full Stack</span>
+            <span>☁️ Cloud Certified</span>
+          </div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.12, duration: 0.6 }}
-            className="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight"
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight text-gray-100"
           >
             I build delightful & fast web experiences
             <br className="hidden sm:block" />
-            <span className="hero-name-accent">Moses Marlon Pereira</span>
+            <span className="hero-name-accent block mt-1">
+              Moses Marlon Pereira
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="mt-4 text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed"
+            transition={{ delay: 0.45 }}
+            className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
             Full-stack developer with a strong AI focus. I build fast, reliable
             products with clean UX and measurable impact.
           </motion.p>
         </section>
 
-        {/* Projects */}
+        {/* PROJECTS */}
         <section id="projects" className="py-20">
-          <h2 className="text-3xl font-bold text-center">Selected Projects</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            Selected Projects
+          </h2>
 
           <div className="mt-10 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p, idx) => (
               <motion.div
                 key={p.title}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ y: -4 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.08 }}
+                transition={{ delay: idx * 0.07 }}
                 onClick={() => router.push(p.path)}
-                className="cursor-pointer rounded-xl border bg-card shadow hover:shadow-lg transition"
+                className="cursor-pointer rounded-xl border border-white/10 bg-white/5 backdrop-blur shadow-md hover:shadow-lg transition"
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold">{p.title}</h3>
-                  <p className="mt-2 text-muted leading-relaxed">{p.summary}</p>
+                  <h3 className="text-xl font-semibold text-gray-100">
+                    {p.title}
+                  </h3>
+                  <p className="mt-2 text-gray-300 leading-relaxed">
+                    {p.summary}
+                  </p>
 
                   <div className="mt-3 flex flex-wrap gap-2">
                     {p.tech.map((t) => (
                       <span
                         key={t}
-                        className="rounded-full bg-white/90 text-gray-900 px-3 py-1 text-xs font-medium"
+                        className="rounded-full border border-indigo-400/20 bg-indigo-500/10 text-indigo-300 px-3 py-1 text-xs font-medium"
                       >
                         {t}
                       </span>
@@ -138,7 +163,7 @@ export default function Home() {
                   >
                     <a
                       href={p.path}
-                      className="rounded-md bg-black px-4 py-3 text-sm text-white"
+                      className="rounded-md bg-indigo-600 px-4 py-3 text-sm text-white hover:bg-indigo-500 transition"
                     >
                       View Case Study
                     </a>
@@ -148,7 +173,7 @@ export default function Home() {
                         href={p.code}
                         target="_blank"
                         rel="noreferrer"
-                        className="rounded-md border px-4 py-3 text-sm"
+                        className="rounded-md border border-white/20 px-4 py-3 text-sm text-gray-200 hover:bg-white/5 transition"
                       >
                         Source Code
                       </a>
@@ -160,14 +185,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills */}
+        {/* SKILLS */}
         <section id="skills" className="py-20">
-          <h2 className="text-3xl font-bold text-center">Skills</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            Skills
+          </h2>
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {skills.map((s) => (
               <div
                 key={s}
-                className="rounded-lg border py-3 text-center text-sm sm:text-base"
+                className="rounded-lg border border-white/10 bg-white/5 py-3 text-center text-sm sm:text-base text-gray-200"
               >
                 {s}
               </div>
@@ -175,11 +202,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Experience */}
+        {/* EXPERIENCE */}
         <section id="about" className="py-20">
-          <h2 className="text-3xl font-bold text-center">Experience</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            Experience
+          </h2>
 
-          <div className="mt-8 max-w-3xl mx-auto space-y-6 text-muted">
+          <div className="mt-8 max-w-3xl mx-auto space-y-6 text-gray-300">
             <Experience title="Virtusa Hackathon">
               Built a traffic management solution focusing on real-time data,
               optimization, and deployment constraints.
@@ -192,19 +221,70 @@ export default function Home() {
 
             <Experience title="DigitsSquad — Senior Core Member">
               Led technical initiatives, mentored juniors, and contributed
-              to multiple production-grade web projects.
+              to production-grade web projects.
             </Experience>
 
             <Experience title="Healthclub Platform">
-              Worked on backend logic, feature integration, and system
-              improvements for a fitness-focused application.
+              Worked on backend logic, feature integration, and system improvements.
             </Experience>
           </div>
         </section>
+        {/* EDUCATION */}
+<section id="education" className="py-20">
+  <h2 className="text-3xl font-bold text-center text-gray-100">
+    Education
+  </h2>
 
-        {/* Certifications */}
-        <section id="certificates" className="py-20 bg-[var(--bg)]">
-          <h2 className="text-3xl font-bold text-center">Certifications</h2>
+  <div className="mt-10 max-w-3xl mx-auto grid gap-6">
+    {/* College */}
+    <div className="rounded-xl border border-white/10 bg-white/5 px-6 py-5">
+      <h3 className="text-lg font-semibold text-gray-100">
+        Integrated M.Tech in Computer Science
+      </h3>
+      <p className="mt-1 text-sm text-gray-300">
+        Vellore Institute of Technology (VIT)
+      </p>
+      <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
+        <span>📅 2021 – 2026</span>
+        <span>🎓 CGPA: 8.55</span>
+      </div>
+    </div>
+
+    {/* 12th */}
+    <div className="rounded-xl border border-white/10 bg-white/5 px-6 py-5">
+      <h3 className="text-lg font-semibold text-gray-100">
+        Class XII (Higher Secondary)
+      </h3>
+      <p className="mt-1 text-sm text-gray-300">
+        Board: CBSE
+      </p>
+      <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
+        <span>📅 Year:2021</span>
+        <span>📊 Percentage:89%</span>
+      </div>
+    </div>
+
+    {/* 10th */}
+    <div className="rounded-xl border border-white/10 bg-white/5 px-6 py-5">
+      <h3 className="text-lg font-semibold text-gray-100">
+        Class X (Secondary School)
+      </h3>
+      <p className="mt-1 text-sm text-gray-300">
+        Board: ICSE
+      </p>
+      <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
+        <span>📅 Year: 2019</span>
+        <span>📊 Percentage: 89%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/* CERTIFICATIONS */}
+        <section id="certificates" className="py-20">
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            Certifications
+          </h2>
 
           <div className="mt-10 max-w-3xl mx-auto space-y-4">
             {[
@@ -215,30 +295,37 @@ export default function Home() {
             ].map(([title, org, year]) => (
               <div
                 key={title}
-                className="flex items-center justify-between rounded-lg border bg-card px-5 py-4"
+                className="flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-5 py-4"
               >
                 <div>
-                  <p className="font-semibold">{title}</p>
-                  <p className="text-sm text-muted">{org}</p>
+                  <p className="font-semibold text-gray-100">{title}</p>
+                  <p className="text-sm text-gray-400">{org}</p>
                 </div>
-                <span className="text-sm text-muted">{year}</span>
+                <span className="text-sm text-gray-400">{year}</span>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact */}
+        {/* CONTACT */}
         <section id="contact" className="py-20">
-          <h2 className="text-3xl font-bold text-center">Contact</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            Contact
+          </h2>
           <p className="mt-2 text-center">
-            <a href={gmailComposeLink} target="_blank" rel="noopener noreferrer">
+            <a
+              href={gmailComposeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-400 hover:underline"
+            >
               {email}
             </a>
           </p>
           <ContactForm email={email} />
         </section>
 
-        <footer className="py-8 text-center text-sm text-muted">
+        <footer className="py-8 text-center text-sm text-gray-400">
           © {new Date().getFullYear()} Moses Marlon Pereira
         </footer>
       </main>
@@ -257,7 +344,7 @@ function Experience({
 }) {
   return (
     <div>
-      <h3 className="font-semibold text-lg">{title}</h3>
+      <h3 className="font-semibold text-lg text-gray-100">{title}</h3>
       <p className="mt-1 text-sm leading-relaxed">{children}</p>
     </div>
   );
