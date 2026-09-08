@@ -32,7 +32,7 @@ export default function NLPCourtPrediction() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per"
+        href="https://github.com/MOSES-per/Court-Judgement-Decisions-Predictions-using-NLP-techniques"
         target="_blank"
         rel="noreferrer"
         className="btn-primary mt-8 inline-block"

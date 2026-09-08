@@ -29,7 +29,7 @@ export default function Relink() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per"
+        href="https://github.com/MOSES-per/Relink"
         target="_blank"
         rel="noreferrer"
         className="btn-primary mt-8 inline-block"

@@ -26,7 +26,7 @@ export default function FurnitureARVR() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per"
+        href="https://github.com/MOSES-per/furniture-ar-master"
         target="_blank"
         rel="noreferrer"
         className="btn-primary mt-8 inline-block"

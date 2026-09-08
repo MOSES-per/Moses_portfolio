@@ -27,7 +27,7 @@ export default function ANPR() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per"
+        href="https://github.com/MOSES-per/ANPR"
         target="_blank"
         rel="noreferrer"
         className="btn-primary mt-8 inline-block"

@@ -44,7 +44,7 @@ export default function InfluenceIQ() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per/InfluenceIQ"
+        href="https://github.com/MOSES-per/Influenceiq"
         target="_blank"
         className="btn-primary mt-8 inline-block"
       >

@@ -28,7 +28,7 @@ export default function QuantumML() {
       </Section>
 
       <a
-        href="https://github.com/MOSES-per"
+        href="https://github.com/MOSES-per/Quantum-Supply-Chain-Manager"
         target="_blank"
         rel="noreferrer"
         className="btn-primary mt-8 inline-block"
