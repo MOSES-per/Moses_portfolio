@@ -41,12 +41,14 @@ export default function Home() {
       summary: "Smart digital platform for residential society management.",
       tech: ["Flutter", "Dart", "Java", "Spring Boot", "MongoDB"],
       path: "/projects/esociety",
+      code: "https://github.com/MOSES-per",
     },
     {
       title: "Furniture AR/VR",
       summary: "Visualizing furniture in real environments using augmented reality.",
       tech: ["Unity", "Vuforia", "AR/VR"],
       path: "/projects/furniture-arvr",
+      code: "https://github.com/MOSES-per",
     },
     {
       title: "Relink",

@@ -38,6 +38,15 @@ export default function ESociety() {
           <li>Streamlined internal communication and reduced administrative overhead</li>
         </ul>
       </Section>
+
+      <a
+        href="https://github.com/MOSES-per"
+        target="_blank"
+        rel="noreferrer"
+        className="btn-primary mt-8 inline-block"
+      >
+        GitHub
+      </a>
     </main>
   );
 }

@@ -24,6 +24,15 @@ export default function FurnitureARVR() {
           <li>Higher engagement through immersive visualization</li>
         </ul>
       </Section>
+
+      <a
+        href="https://github.com/MOSES-per"
+        target="_blank"
+        rel="noreferrer"
+        className="btn-primary mt-8 inline-block"
+      >
+        GitHub
+      </a>
     </main>
   );
 }
