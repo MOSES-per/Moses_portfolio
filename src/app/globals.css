@@ -18,7 +18,7 @@
   --radius: 12px;
 }
 
-/* Respect prefers-color-scheme:dark — keep same palette but allow OS preference */
+/* Respect prefers-color-scheme:dark — keep same palette but allow OS preference */ 
 @media (prefers-color-scheme: dark) {
   :root{
     /* keep deep navy but allow slight adjustments if user prefers dark */

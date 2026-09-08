@@ -18,7 +18,7 @@ export default function Home() {
     {
       title: "InfluenceIQ",
       summary: "AI-powered influencer data intelligence and automation platform.",
-      tech: ["Python", "Streamlit", "MongoDB"],
+      tech: ["Python", "Streamlit", "NLP", "SQLite"],
       path: "/projects/influenceiq",
       code: "https://github.com/MOSES-per/InfluenceIQ",
     },
@@ -32,14 +32,14 @@ export default function Home() {
     {
       title: "Quantum ML for Supply Chain",
       summary: "Quantum neural networks for backorder prediction and optimization.",
-      tech: ["Pennylane", "Qiskit"],
+      tech: ["Python", "PennyLane", "Qiskit"],
       path: "/projects/quantum-ml",
       code: "https://github.com/MOSES-per",
     },
     {
       title: "eSociety",
       summary: "Smart digital platform for residential society management.",
-      tech: ["Java", "Spring Boot", "SQL"],
+      tech: ["Flutter", "Dart", "Java", "Spring Boot", "MongoDB"],
       path: "/projects/esociety",
     },
     {
@@ -48,13 +48,35 @@ export default function Home() {
       tech: ["Unity", "Vuforia", "AR/VR"],
       path: "/projects/furniture-arvr",
     },
+    {
+      title: "Relink",
+      summary: "Local-first cross-device app pairing Windows and iPhone over WebSocket with QR-code pairing.",
+      tech: ["Rust", "React", "TypeScript", "Tauri"],
+      path: "/projects/relink",
+      code: "https://github.com/MOSES-per",
+    },
+    {
+      title: "Indian Supreme Court Case Outcome Prediction",
+      summary: "NLP models predicting Indian Supreme Court case outcomes from case-facts text.",
+      tech: ["Python", "NLP", "TF-IDF"],
+      path: "/projects/nlp-court-prediction",
+      code: "https://github.com/MOSES-per",
+    },
+    {
+      title: "F.I.N. (Friend In Need)",
+      summary: "Lean-startup project solving printing, resale, transport & housing pain points for VIT students.",
+      tech: ["Lean Startup", "Market Research"],
+      path: "/projects/fin",
+    },
   ];
 
   const skills = [
     "SQL", "Java", "HTML", "CSS", "Excel",
-    "Python", "C++", "JavaScript", "Streamlit",
-    "Angular", "Docker", "Azure", "MongoDB",
-    "Selenium", "Detectron2", "OCR",
+    "Python", "C++", "JavaScript", "TypeScript",
+    "Rust", "Streamlit", "React", "Flutter",
+    "Tauri", "Next.js", "Angular", "Docker",
+    "AWS", "Azure", "MongoDB", "Selenium",
+    "Detectron2", "OCR",
   ];
 
   return (
@@ -91,8 +113,9 @@ export default function Home() {
           </motion.p>
 
           <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-300">
-            <span>⚡ 5+ Projects</span>
+            <span>⚡ 8+ Projects</span>
             <span>🧠 AI + Full Stack</span>
+            <span>🎨 Frontend Development</span>
             <span>☁️ Cloud Certified</span>
           </div>
 
@@ -115,8 +138,10 @@ export default function Home() {
             transition={{ delay: 0.45 }}
             className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
-            Full-stack developer with a strong AI focus. I build fast, reliable
-            products with clean UX and measurable impact.
+            Computer Science graduate (M.Tech Integrated, VIT) with hands-on
+            experience across machine learning, quantum computing, and
+            full-stack development — now building toward cloud &amp; platform
+            engineering.
           </motion.p>
         </section>
 
@@ -209,14 +234,21 @@ export default function Home() {
           </h2>
 
           <div className="mt-8 max-w-3xl mx-auto space-y-6 text-gray-300">
+            <Experience title="Virtusa — Intern Technology">
+              Developed and tested RESTful APIs with Java and Spring Boot,
+              built Flutter frontend features, and integrated them with
+              backend services.
+            </Experience>
+
             <Experience title="Virtusa Hackathon">
               Built a traffic management solution focusing on real-time data,
               optimization, and deployment constraints.
             </Experience>
 
             <Experience title="Microsoft E-Train — Cloud Practitioner">
-              Hands-on exposure to Azure services, cloud fundamentals,
-              and architecture best practices.
+              Designed automated workflows using Power Automate and Azure
+              Logic Apps, gaining hands-on exposure to Azure cloud
+              fundamentals and architecture best practices.
             </Experience>
 
             <Experience title="DigitsSquad — Senior Core Member">
@@ -246,7 +278,7 @@ export default function Home() {
       </p>
       <div className="mt-2 flex flex-wrap gap-4 text-sm text-gray-400">
         <span>📅 2021 – 2026</span>
-        <span>🎓 CGPA: 8.55</span>
+        <span>🎓 CGPA: 8.50</span>
       </div>
     </div>
 
@@ -292,6 +324,7 @@ export default function Home() {
               ["AWS Partner: Sales Accreditation", "AWS", "2024"],
               ["AWS Partner: Cloud Economics", "AWS", "2024"],
               ["React.js Developer Assessment", "Learntube", "2025"],
+              ["AWS Certified Solutions Architect – Associate", "AWS", "In Progress"],
             ].map(([title, org, year]) => (
               <div
                 key={title}
@@ -321,6 +354,9 @@ export default function Home() {
             >
               {email}
             </a>
+          </p>
+          <p className="mt-1 text-center text-sm text-gray-400">
+            +91 77965 33054
           </p>
           <ContactForm email={email} />
         </section>

@@ -13,10 +13,25 @@ export default function InfluenceIQ() {
 
       <Section title="Approach">
         <ul className="list-disc pl-6 space-y-2">
-          <li>Built modular collectors for Reddit & YouTube</li>
-          <li>Automated data extraction & normalization</li>
-          <li>Designed engagement & authenticity scoring</li>
-          <li>Streamlit dashboard for insights</li>
+          <li>
+            Built modular collectors for the YouTube Data API and Reddit's
+            public API, with a CSV-based ingestion path for Instagram in
+            place of unreliable scraping
+          </li>
+          <li>
+            Designed a composite Influencer Intelligence Score from
+            engagement-quality, authenticity-risk, and NLP-based niche
+            analysis
+          </li>
+          <li>
+            Added a platform-confidence metric flagging whether a score
+            rests on live or sample data
+          </li>
+          <li>
+            Shipped an interactive Streamlit dashboard with single- and
+            side-by-side creator comparisons, plus automated CSV/PDF report
+            generation
+          </li>
         </ul>
       </Section>
 

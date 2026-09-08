@@ -1,29 +1,33 @@
-export default function QuantumML() {
+export default function NLPCourtPrediction() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
-      <h1 className="text-4xl font-bold">Quantum ML for Supply Chain Optimization</h1>
+      <h1 className="text-4xl font-bold">
+        Indian Supreme Court Case Outcome Prediction
+      </h1>
       <p className="mt-2 text-lg text-muted">
-        Exploring quantum neural networks for backorder prediction.
+        NLP models predicting case outcomes from Indian Supreme Court case-facts text.
       </p>
 
       <Section title="Problem">
-        Classical ML models struggle with optimization in complex,
-        large-scale supply chains.
+        Predicting how a case is likely to resolve from its facts alone is a
+        hard text-classification problem, especially on a small, imbalanced
+        legal dataset.
       </Section>
 
       <Section title="Approach">
         <ul className="list-disc pl-6 space-y-2">
-          <li>Implemented Quantum Neural Networks using PennyLane for backorder prediction</li>
-          <li>Designed MERA-based quantum architectures</li>
-          <li>Solved Vehicle Routing Problems using QAOA/VQE-based quantum optimization in Qiskit</li>
-          <li>Benchmarked accuracy and performance against classical ML approaches</li>
+          <li>
+            Built and compared 5 models on 3,464 Supreme Court cases:
+            Doc2Vec+NN, CNN, Bi-gram+TF-IDF, BiLSTM, and LSTM+embeddings
+          </li>
+          <li>Upsampled the imbalanced 2,114 / 1,350 class split for training</li>
         </ul>
       </Section>
 
       <Section title="Results">
         <ul className="list-disc pl-6 space-y-2">
-          <li>Demonstrated feasibility of QML for supply chains</li>
-          <li>Achieved competitive results on simulators</li>
+          <li>Bi-gram + TF-IDF was the best model at 98.70% test accuracy</li>
+          <li>A 6.35-point improvement over the neural network and CNN approaches</li>
         </ul>
       </Section>
 
