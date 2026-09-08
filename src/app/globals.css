@@ -24,20 +24,20 @@
   --btn-radius: 10px;
 }
 
-/* Color tokens — dark theme: warm espresso, same brand accent */
+/* Color tokens — dark theme: original deep navy, unchanged */
 .dark{
-  --bg-1: #1c140f;
-  --bg-2: #241a12;
+  --bg-1: #071126;
+  --bg-2: #081426;
   --page-bg: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
-  --surface: #241a12;
-  --card: rgba(40,28,20,0.76);
-  --text-on-dark: #f5ece1;  /* warm ivory text */
-  --text-dark: #2b2118;
-  --muted: #c9b8a8;         /* warm light taupe */
+  --surface: #0f1724;
+  --card: rgba(12,16,24,0.76);
+  --text-on-dark: #e6eef8;
+  --text-dark: #071126;
+  --muted: #9aa8ba;
   --brand: #4f46e5;         /* original indigo (dark mode, unchanged) */
   --accent: #14b8a6;        /* original teal (dark mode, unchanged) */
   --btn-shadow: rgba(20,24,48,0.18);
-  --glass: rgba(255,247,237,0.06);
+  --glass: rgba(255,255,255,0.06);
 }
 
 /* Base */
