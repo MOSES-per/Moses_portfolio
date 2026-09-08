@@ -35,16 +35,27 @@ export default function ContactForm({ email }: { email: string }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="mx-auto mt-8 max-w-md rounded-xl border bg-card p-6 shadow-soft"
+      className="mx-auto mt-8 max-w-md rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 p-6 shadow-soft"
     >
       <label className="block text-sm">Name</label>
-      <input className="mt-1 w-full rounded-md border p-2" required />
+      <input
+        className="mt-1 w-full rounded-md border border-black/15 dark:border-white/15 bg-[var(--surface)] p-2"
+        required
+      />
 
       <label className="mt-4 block text-sm">Email</label>
-      <input type="email" className="mt-1 w-full rounded-md border p-2" required />
+      <input
+        type="email"
+        className="mt-1 w-full rounded-md border border-black/15 dark:border-white/15 bg-[var(--surface)] p-2"
+        required
+      />
 
       <label className="mt-4 block text-sm">Message</label>
-      <textarea className="mt-1 w-full rounded-md border p-2" rows={4} required />
+      <textarea
+        className="mt-1 w-full rounded-md border border-black/15 dark:border-white/15 bg-[var(--surface)] p-2"
+        rows={4}
+        required
+      />
 
       <button
         className="mt-6 w-full rounded-lg btn-primary"

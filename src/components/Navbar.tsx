@@ -49,7 +49,7 @@ export default function Navbar() {
         transition={{ duration: 0.4 }}
         className={`fixed top-0 left-0 right-0 z-50 backdrop-blur ${
           scrolled
-            ? "bg-white/70 dark:bg-black/70 border-b border-black/10 dark:border-white/10"
+            ? "bg-[var(--surface)]/80 dark:bg-black/70 border-b border-black/10 dark:border-white/10"
             : "bg-transparent"
         }`}
       >
@@ -125,7 +125,7 @@ export default function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed top-16 left-0 right-0 z-50 mx-4 rounded-xl border border-black/10 dark:border-white/10 bg-white/90 dark:bg-black/90 p-4"
+              className="fixed top-16 left-0 right-0 z-50 mx-4 rounded-xl border border-black/10 dark:border-white/10 bg-[var(--surface)]/95 dark:bg-black/90 p-4"
             >
               <div className="flex flex-col gap-2">
                 {sections.map((s) => (
