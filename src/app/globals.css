@@ -1,32 +1,43 @@
-/* src/app/globals.css — professional deep-navy background + accessible colors */
+/* src/app/globals.css — theme-aware background + accessible colors (light default, dark via .dark) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
-/* Color tokens */
+/* Class-based dark mode: toggled by adding/removing .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Color tokens — light theme (default): warm ivory & terracotta */
 :root{
-  --bg-dark-1: #071126;    /* deep navy */
-  --bg-dark-2: #081426;    /* slightly different stop */
-  --page-bg: linear-gradient(135deg, var(--bg-dark-1) 0%, var(--bg-dark-2) 100%);
-  --surface: #0f1724;      /* card dark fallback */
-  --card: #ffffff;         /* light card bg */
-  --text-on-dark: #e6eef8; /* light text on dark bg */
-  --text-dark: #071126;    /* dark text on light card */
-  --muted: #9aa8ba;
-  --brand: #4f46e5;        /* indigo */
-  --accent: #14b8a6;       /* teal */
-  --glass: rgba(255,255,255,0.06);
+  --bg-1: #fdf8f2;
+  --bg-2: #f6e9da;
+  --page-bg: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  --surface: #fffdfa;
+  --card: #fffdfa;
+  --text-on-dark: #2b2118;  /* main foreground text — warm ink */
+  --text-dark: #2b2118;
+  --muted: #8a7a6c;         /* warm taupe */
+  --brand: #e0652c;         /* terracotta (light mode) */
+  --accent: #f2a93c;        /* warm amber/gold (light mode) */
+  --btn-shadow: rgba(224,101,44,0.25);
+  --toggle-accent: #e0652c; /* always terracotta, both themes, so the toggle stays visible */
+  --glass: rgba(43,33,24,0.05);
   --radius: 12px;
+  --btn-radius: 10px;
 }
 
-/* Respect prefers-color-scheme:dark — keep same palette but allow OS preference */ 
-@media (prefers-color-scheme: dark) {
-  :root{
-    /* keep deep navy but allow slight adjustments if user prefers dark */
-    --page-bg: linear-gradient(135deg, #04101a 0%, #051220 100%);
-    --card: rgba(12,16,24,0.72);
-    --text-on-dark: #e6eef8;
-    --muted: #94a3b8;
-  }
+/* Color tokens — dark theme: warm espresso, same brand accent */
+.dark{
+  --bg-1: #1c140f;
+  --bg-2: #241a12;
+  --page-bg: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  --surface: #241a12;
+  --card: rgba(40,28,20,0.76);
+  --text-on-dark: #f5ece1;  /* warm ivory text */
+  --text-dark: #2b2118;
+  --muted: #c9b8a8;         /* warm light taupe */
+  --brand: #4f46e5;         /* original indigo (dark mode, unchanged) */
+  --accent: #14b8a6;        /* original teal (dark mode, unchanged) */
+  --btn-shadow: rgba(20,24,48,0.18);
+  --glass: rgba(255,247,237,0.06);
 }
 
 /* Base */
@@ -39,45 +50,16 @@ html,body{
   color: var(--text-on-dark);
 }
 
-/* Utility + semantic rules used across components */
-:root {
-  --btn-radius: 10px;
-}
-
-/* Nav backdrop and text */
-.site-nav {
-  color: white;
-}
-.site-nav .brand-badge {
-  background: linear-gradient(90deg, var(--brand), var(--accent));
-}
-
-/* Use a darker translucent nav when scrolled for readability */
-.site-nav.scrolled {
-  background: linear-gradient(180deg, rgba(2,6,23,0.72), rgba(2,6,23,0.55));
-  backdrop-filter: blur(6px) saturate(120%);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-
-/* Card surface (light on dark background) */
+/* Card surface */
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
-  color: var(--text-dark);
+  background: var(--card);
+  color: var(--text-on-dark);
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(2,6,23,0.12);
-  border: 1px solid rgba(15,23,36,0.06);
+  box-shadow: 0 10px 30px rgba(43,33,24,0.12);
+  border: 1px solid rgba(127,110,96,0.16);
 }
 
-/* Alternate card style for dark-mode (transparent cards on dark) */
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: linear-gradient(180deg, rgba(12,16,24,0.76), rgba(12,16,24,0.9));
-    color: var(--text-on-dark);
-    border: 1px solid rgba(255,255,255,0.03);
-  }
-}
-
-/* Headline style for hero (white & emphasis) */
+/* Headline style for hero */
 .hero-heading {
   color: var(--text-on-dark);
   font-weight: 800;
@@ -97,17 +79,17 @@ html,body{
   color: white;
   border-radius: var(--btn-radius);
   padding: 0.7rem 1.1rem;
-  box-shadow: 0 12px 32px rgba(20,24,48,0.18);
+  box-shadow: 0 12px 32px var(--btn-shadow);
 }
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: var(--text-on-dark);
   border-radius: var(--btn-radius);
   padding: 0.6rem 1rem;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(127,110,96,0.3);
 }
 
-/* Muted text on dark bg */
+/* Muted text */
 .text-muted { color: var(--muted); }
 
 /* Smooth scroll */
