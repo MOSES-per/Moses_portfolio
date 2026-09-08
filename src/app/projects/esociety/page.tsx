@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function ESociety() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">eSociety</h1>
       <p className="mt-2 text-lg text-muted">
         Digital platform for smart residential society management.

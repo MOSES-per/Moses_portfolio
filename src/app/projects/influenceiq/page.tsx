@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function InfluenceIQ() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">InfluenceIQ</h1>
       <p className="mt-2 text-lg text-muted">
         AI-powered influencer data intelligence and automation platform.

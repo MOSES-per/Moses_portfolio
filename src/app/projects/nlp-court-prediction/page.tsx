@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function NLPCourtPrediction() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">
         Indian Supreme Court Case Outcome Prediction
       </h1>

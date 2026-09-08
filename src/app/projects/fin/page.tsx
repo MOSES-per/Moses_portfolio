@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function FIN() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">F.I.N. (Friend In Need)</h1>
       <p className="mt-2 text-lg text-muted">
         A lean-startup project addressing everyday pain points for VIT students.

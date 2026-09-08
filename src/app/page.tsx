@@ -147,6 +147,25 @@ export default function Home() {
           </motion.p>
         </section>
 
+        {/* ABOUT */}
+        <section id="about" className="py-20">
+          <h2 className="text-3xl font-bold text-center text-gray-100">
+            About
+          </h2>
+          <div className="mt-8 max-w-2xl mx-auto text-center text-gray-300 leading-relaxed">
+            <p>
+              I&apos;m a Computer Science graduate (M.Tech Integrated, VIT)
+              who likes shipping things end to end — from a Spring Boot API
+              to the Flutter screen that calls it. My projects span
+              full-stack development and applied machine learning, with
+              detours into quantum computing and AR along the way, and
+              I&apos;m currently growing into cloud &amp; platform
+              engineering while preparing for the AWS Solutions Architect
+              Associate exam.
+            </p>
+          </div>
+        </section>
+
         {/* PROJECTS */}
         <section id="projects" className="py-20">
           <h2 className="text-3xl font-bold text-center text-gray-100">
@@ -230,7 +249,7 @@ export default function Home() {
         </section>
 
         {/* EXPERIENCE */}
-        <section id="about" className="py-20">
+        <section id="experience" className="py-20">
           <h2 className="text-3xl font-bold text-center text-gray-100">
             Experience
           </h2>

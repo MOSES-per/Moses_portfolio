@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function ANPR() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">ANPR using Keypoints RCNN</h1>
       <p className="mt-2 text-lg text-muted">
         High-accuracy automatic number plate recognition using deep learning.

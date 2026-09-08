@@ -1,6 +1,9 @@
+import BackButton from "../../../components/BackButton";
+
 export default function QuantumML() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-24">
+      <BackButton />
       <h1 className="text-4xl font-bold">Quantum ML for Supply Chain Optimization</h1>
       <p className="mt-2 text-lg text-muted">
         Exploring quantum neural networks for backorder prediction.
