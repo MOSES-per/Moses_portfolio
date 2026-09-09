@@ -9,6 +9,22 @@ export default function InfluenceIQ() {
         AI-powered influencer data intelligence and automation platform.
       </p>
 
+      <figure className="mt-8">
+        <video
+          src="/influenceiq/demo.mp4"
+          poster="/influenceiq/demo-poster.png"
+          className="w-full rounded-xl border border-black/10 dark:border-white/10"
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+        />
+        <figcaption className="mt-2 text-center text-xs text-muted">
+          Live demo: analyzing a YouTube creator in the Streamlit dashboard.
+        </figcaption>
+      </figure>
+
       <Section title="Problem">
         Manual influencer research across Instagram, YouTube, and Reddit is slow,
         inconsistent, and error-prone.
